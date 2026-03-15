@@ -1,0 +1,432 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Farming Assistant - Smart Crop Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="satellite-icon">🛰️</span>
+                <span>AI Farming Assistant</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#voice-assistant" class="nav-link">Voice AI</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+            </ul>
+            <button class="btn-primary" onclick="scrollToSection('voice-assistant')">Talk to AI</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <div class="satellite-animation">
+                <div class="satellite">🛰️</div>
+                <div class="scan-beam"></div>
+            </div>
+
+            <h1 class="hero-title">
+                AI Farming<br>Assistant
+                <span class="gradient-text">Powered by Satellite Intelligence</span>
+            </h1>
+            <p class="hero-subtitle">Monitor crop health in real-time using satellite data and AI predictions. Get voice-based farming advice in Hindi.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary btn-large" onclick="startMonitoring()">
+                    <span class="icon">📊</span> Start Monitoring
+                </button>
+                <button class="btn-secondary btn-large" onclick="openVoiceAssistant()">
+                    <span class="icon">🎤</span> Talk to AI
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">50K+</span>
+                    <span class="stat-label">Farms Monitored</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">95%</span>
+                    <span class="stat-label">Prediction Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">Powerful Features for Modern Farming</h2>
+            <p class="section-subtitle">Leverage cutting-edge AI and satellite technology</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card glass-effect">
+                <div class="feature-icon">🛰️</div>
+                <h3>Satellite Crop Monitoring</h3>
+                <p>Real-time monitoring of your crops using high-resolution satellite imagery</p>
+                <div class="feature-badge">Daily Updates</div>
+            </div>
+
+            <div class="feature-card glass-effect">
+                <div class="feature-icon">🌱</div>
+                <h3>NDVI Health Analysis</h3>
+                <p>Vegetation health tracking with scientific NDVI measurements and trends</p>
+                <div class="feature-badge">AI Powered</div>
+            </div>
+
+            <div class="feature-card glass-effect">
+                <div class="feature-icon">🎤</div>
+                <h3>Voice AI Assistant</h3>
+                <p>Talk to AI in Hindi (हिंदी) for instant farming advice and recommendations</p>
+                <div class="feature-badge">Hindi Support</div>
+            </div>
+
+            <div class="feature-card glass-effect">
+                <div class="feature-icon">⚠️</div>
+                <h3>Stress Prediction</h3>
+                <p>Predict crop stress 2-3 weeks in advance using machine learning models</p>
+                <div class="feature-badge">Early Alert</div>
+            </div>
+
+            <div class="feature-card glass-effect">
+                <div class="feature-icon">💡</div>
+                <h3>Smart Recommendations</h3>
+                <p>Get actionable farming advice based on data analysis and weather patterns</p>
+                <div class="feature-badge">Customized</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">4 Simple Steps to Smart Farming</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step" style="animation-delay: 0s;">
+                <div class="step-number glass-effect">1</div>
+                <div class="step-icon">📍</div>
+                <h3>Select Farm Location</h3>
+                <p>Add your farm location and define farm boundaries on the map</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step" style="animation-delay: 0.1s;">
+                <div class="step-number glass-effect">2</div>
+                <div class="step-icon">🛰️</div>
+                <h3>Satellite Analysis</h3>
+                <p>We fetch satellite data and analyze crop vegetation patterns</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step" style="animation-delay: 0.2s;">
+                <div class="step-number glass-effect">3</div>
+                <div class="step-icon">🤖</div>
+                <h3>AI Prediction</h3>
+                <p>Our AI models predict crop health and potential stress conditions</p>
+            </div>
+
+            <div class="step-arrow">→</div>
+
+            <div class="step" style="animation-delay: 0.3s;">
+                <div class="step-number glass-effect">4</div>
+                <div class="step-icon">💬</div>
+                <h3>Get Advice</h3>
+                <p>Receive actionable recommendations via voice or text in Hindi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section id="dashboard" class="dashboard-preview">
+        <div class="section-header">
+            <h2 class="section-title">Intelligent Dashboard</h2>
+            <p class="section-subtitle">All farm data at a glance</p>
+        </div>
+
+        <div class="dashboard-container glass-effect">
+            <div class="dashboard-header">
+                <h3>Farm Health Monitor</h3>
+                <span class="live-indicator">● Live</span>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="card-title">NDVI Score</div>
+                    <div class="card-value">0.58</div>
+                    <div class="card-status">Healthy</div>
+                    <div class="chart-mini">█ █ █ █ ▆ ▇ █</div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-title">Crop Health</div>
+                    <div class="card-value">85%</div>
+                    <div class="card-status">Good</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-title">Stress Risk</div>
+                    <div class="card-value">Low</div>
+                    <div class="card-status">All Clear</div>
+                    <div class="risk-gauge">🟢</div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-title">Soil Moisture</div>
+                    <div class="card-value">62%</div>
+                    <div class="card-status">Optimal</div>
+                    <div class="moisture-indicator"></div>
+                </div>
+
+                <div class="dashboard-card dashboard-wide">
+                    <div class="card-title">Temperature & Rainfall (7 Days)</div>
+                    <div class="mini-chart">
+                        <span>│ ╭╯│╮│┐ │</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-card dashboard-wide">
+                    <div class="card-title">Crop Health Trend</div>
+                    <div class="trend-chart">
+                        <canvas id="trendChart" width="300" height="80"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heatmap-container">
+                <div class="heatmap-title">NDVI Heatmap</div>
+                <div class="heatmap">
+                    <div class="heatmap-cell" style="background: linear-gradient(to right, #8B0000, #DC143C);"></div>
+                    <div class="heatmap-cell" style="background: linear-gradient(to right, #FF6347, #FFA500);"></div>
+                    <div class="heatmap-cell" style="background: linear-gradient(to right, #FFD700, #90EE90);"></div>
+                    <div class="heatmap-cell" style="background: linear-gradient(to right, #3CB371, #228B22);"></div>
+                </div>
+                <div class="heatmap-scale">
+                    <span>Low</span> <span>Medium</span> <span>High</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Assistant Section -->
+    <section id="voice-assistant" class="voice-section">
+        <div class="section-header">
+            <h2 class="section-title">AI Voice Assistant</h2>
+            <p class="section-subtitle">Talk to your farming advisor in Hindi</p>
+        </div>
+
+        <div class="voice-container glass-effect">
+            <div class="voice-demo">
+                <div class="microphone-button" id="micButton" onclick="toggleMicrophone()">
+                    <span class="mic-icon">🎤</span>
+                    <div class="pulse"></div>
+                    <div class="pulse pulse-2"></div>
+                </div>
+
+                <div class="voice-waveform" id="waveform" style="display: none;">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <p class="voice-status" id="voiceStatus">Click to talk or type below</p>
+            </div>
+
+            <div class="conversation">
+                <div class="chat-bubble user-bubble">
+                    <p>Mere khet ki health check karo</p>
+                    <small>Check my field health</small>
+                </div>
+
+                <div class="chat-bubble ai-bubble">
+                    <div class="ai-avatar">🤖</div>
+                    <div>
+                        <p>Aapke khet ka NDVI score 0.58 hai jo achche star ka hai. Mitti ki moisture 62% hai jo optimal hai.</p>
+                        <small>Your field NDVI is 0.58 which is healthy. Soil moisture is 62% which is optimal.</small>
+                    </div>
+                </div>
+
+                <div class="chat-bubble user-bubble">
+                    <p>Agle 3 hafte mein kya karna chahiye?</p>
+                    <small>What should I do in the next 3 weeks?</small>
+                </div>
+
+                <div class="chat-bubble ai-bubble">
+                    <div class="ai-avatar">🤖</div>
+                    <div>
+                        <p>Baaris aane wali hai isliye aap siching schedule ko kam kijiye. Ek hafta mein fertilizer daaliyega.</p>
+                        <small>Rain is coming so reduce irrigation. Apply fertilizer in one week.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" class="voice-input" placeholder="Type or use voice command..." />
+                <button class="btn-primary">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="section-header">
+            <h2 class="section-title">Real Impact, Real Results</h2>
+            <p class="section-subtitle">Making farming smarter across India</p>
+        </div>
+
+        <div class="impact-grid">
+            <div class="impact-card glass-effect">
+                <div class="impact-number">+23%</div>
+                <div class="impact-title">Improved Crop Yield</div>
+                <p>Farmers using our AI services see an average 23% increase in crop productivity</p>
+            </div>
+
+            <div class="impact-card glass-effect">
+                <div class="impact-number">-40%</div>
+                <div class="impact-title">Water Conservation</div>
+                <p>Smart irrigation recommendations save 40% water without sacrificing yield</p>
+            </div>
+
+            <div class="impact-card glass-effect">
+                <div class="impact-number">2-3 weeks</div>
+                <div class="impact-title">Early Detection</div>
+                <p>Predict crop stress 2-3 weeks early for timely intervention</p>
+            </div>
+
+            <div class="impact-card glass-effect">
+                <div class="impact-number">24/7</div>
+                <div class="impact-title">Support Available</div>
+                <p>AI assistant available round the clock in 12 Indian languages</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="section-header">
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-subtitle">Crop science experts + AI engineers</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card glass-effect">
+                <div class="team-avatar">👨‍🔬</div>
+                <p class="team-role">Agricultural Scientist</p>
+                <p class="team-bio">PhD in Crop Science with 15 years of farming research</p>
+            </div>
+
+            <div class="team-card glass-effect">
+                <div class="team-avatar">👩‍💻</div>
+                <p class="team-role">AI Lead</p>
+                <p class="team-bio">ML Engineer specializing in satellite data analysis</p>
+            </div>
+
+            <div class="team-card glass-effect">
+                <div class="team-avatar">👨‍💼</div>
+                <p class="team-role">Founder & CEO</p>
+                <p class="team-bio">AgriTech entrepreneur, farmer's son from Punjab</p>
+            </div>
+
+            <div class="team-card glass-effect">
+                <div class="team-avatar">👩‍🔧</div>
+                <p class="team-role">Product Manager</p>
+                <p class="team-bio">Designer & farmer advocate, ensures farmer-centric design</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Farming Assistant</h4>
+                <p>Empowering Indian farmers with AI-powered crop monitoring and real-time farming advice through satellite intelligence.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">🔗 GitHub</a>
+                    <a href="#" class="social-icon">💼 LinkedIn</a>
+                    <a href="#" class="social-icon">🐦 Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@aifarming.in</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Head Office: Chandigarh, Punjab</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Get Started</h4>
+                <button class="btn-primary" onclick="startMonitoring()">Start Monitoring</button>
+                <button class="btn-secondary" onclick="openVoiceAssistant()">Try Voice AI</button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AI Farming Assistant. All rights reserved. | Empowering Indian Agriculture with AI</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="monitoringModal" class="modal" style="display: none;">
+        <div class="modal-content glass-effect">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Start Monitoring Your Farm</h2>
+            <p>Enter your farm details to begin AI-powered crop monitoring.</p>
+            <input type="text" placeholder="Farm Name" class="modal-input" />
+            <input type="text" placeholder="Location (Lat, Long)" class="modal-input" />
+            <input type="text" placeholder="Email Address" class="modal-input" />
+            <button class="btn-primary" onclick="handleMonitoring()">Start Monitoring</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
