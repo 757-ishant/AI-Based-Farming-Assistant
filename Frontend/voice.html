@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Farming Assistant - Voice Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">&#127793;</span>
+                <h1>AI Farming Assistant</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="voice.html" class="active">Voice Assistant</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Voice Assistant Container -->
+    <div class="voice-wrapper">
+        <div class="voice-header-section">
+            <h1>AI Voice Farming Assistant</h1>
+            <p class="subtitle">Talk to your AI advisor in Hindi (हिंदी)</p>
+        </div>
+
+        <!-- Main Voice Interface -->
+        <div class="voice-container glass-effect">
+            <!-- Microphone Section -->
+            <div class="microphone-section">
+                <div class="mic-button-wrapper">
+                    <button class="microphone-button" id="micButton">
+                        <span class="mic-icon">🎤</span>
+                        <div class="pulse-ring"></div>
+                    </button>
+                    <p class="mic-instruction" id="micInstruction">Click to talk</p>
+                </div>
+
+                <!-- Voice Waveform Animation -->
+                <div class="waveform-container" id="waveformContainer" style="display: none;">
+                    <div class="waveform">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <p class="listening-status" id="listeningStatus">Listening...</p>
+                </div>
+
+                <p class="voice-status-message" id="voiceStatus"></p>
+            </div>
+
+            <!-- Conversation Area -->
+            <div class="conversation-section">
+                <div class="conversation-header">
+                    <h3>Conversation</h3>
+                    <button class="btn btn-small" id="clearBtn">Clear Chat</button>
+                </div>
+                
+                <div class="conversation-box" id="conversationBox">
+                    <!-- Initial greeting -->
+                    <div class="message ai-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <p class="message-text">नमस्ते! मैं आपका AI खेती सलाहकार हूं। आप मुझसे अपने खेत के स्वास्थ्य, मौसम, कीटों और खाद के बारे में पूछ सकते हैं।</p>
+                            <p class="message-time">Hello! I'm your AI farming advisor. You can ask me about your crop health, weather, pests, and fertilizer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-section">
+                    <input 
+                        type="text" 
+                        id="textInput" 
+                        class="text-input" 
+                        placeholder="Type your question in Hindi or English..."
+                    >
+                    <button class="btn btn-primary" id="sendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Questions -->
+        <div class="quick-questions-section">
+            <h3>Popular Questions</h3>
+            <div class="quick-buttons">
+                <button class="quick-btn" onclick="askQuestion('Mere khet ki health check karo')">
+                    🌾 Check My Crop Health
+                </button>
+                <button class="quick-btn" onclick="askQuestion('Kal barish hogi kya?')">
+                    🌧️ Will It Rain Tomorrow?
+                </button>
+                <button class="quick-btn" onclick="askQuestion('Kaun si khad lagaun?')">
+                    🥗 Which Fertilizer?
+                </button>
+                <button class="quick-btn" onclick="askQuestion('Keeton se bachav kaise karun?')">
+                    🐛 Pest Prevention Tips
+                </button>
+                <button class="quick-btn" onclick="askQuestion('Sinchai kab karun?')">
+                    💧 When to Irrigate?
+                </button>
+                <button class="quick-btn" onclick="askQuestion('Urja prabandhan kaise karun?')">
+                    ⚡ Energy Tips
+                </button>
+            </div>
+        </div>
+
+        <!-- Sample Conversations -->
+        <div class="sample-section">
+            <h3>Sample Conversations</h3>
+            <div class="sample-grid">
+                <div class="sample-card">
+                    <h4>🌾 Crop Health Check</h4>
+                    <div class="sample-convo">
+                        <p><strong>You:</strong> Mere khet ki health check karo</p>
+                        <p><strong>AI:</strong> Aapke khet ka NDVI score 0.58 hai jo achcha hai. Mitti ki moisture 62% hai.</p>
+                    </div>
+                </div>
+                <div class="sample-card">
+                    <h4>🌧️ Weather Inquiry</h4>
+                    <div class="sample-convo">
+                        <p><strong>You:</strong> Agle hafte mein mausam kaisa rahega?</p>
+                        <p><strong>AI:</strong> 2-3 din mein baaris ki sambhavna hai. Apne sinchai schedule ko reduce kijiye.</p>
+                    </div>
+                </div>
+                <div class="sample-card">
+                    <h4>🥗 Fertilizer Advice</h4>
+                    <div class="sample-convo">
+                        <p><strong>You:</strong> Kaun si khad lagaun?</p>
+                        <p><strong>AI:</strong> Aapke crop ke liye Urea aur DAP ka mix sahi rहेगा. 50kg Urea per acre laga dijiye.</p>
+                    </div>
+                </div>
+                <div class="sample-card">
+                    <h4>🐛 Pest Alert</h4>
+                    <div class="sample-convo">
+                        <p><strong>You:</strong> Kya mujhe keeton se concern hona chahiye?</p>
+                        <p><strong>AI:</strong> Aapke area mein leaf hoppers ke chances hain. Neem oil spray kar dijiye.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 AI Farming Assistant. Your intelligent voice companion for modern farming.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="voice.js"></script>
+</body>
+</html>
